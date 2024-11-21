@@ -1,0 +1,59 @@
+[
+  {
+    "categoryName": "default",
+    "categorySlug": "",
+    "pages": [
+      {
+        "pageTitle": "Argon2d",
+        "metaDescription": "Argon2d is a memory-hard password hashing algorithm designed to resist GPU-based attacks.",
+        "slug": "/argon2d/",
+        "pageHeading": "Argon2d",
+        "pageDescription": "Argon2d is a memory-hard password hashing algorithm designed to resist GPU-based attacks.",
+        "pageContentBlocks": [
+          "## Description",
+          "Argon2d is one variant of the Argon2 password hashing algorithm, which won the Password Hashing Competition in 2015. It is specifically designed to be memory-hard, meaning it requires a significant amount of memory to compute, which makes it resistant to brute-force attacks using specialized hardware like GPUs. Argon2d prioritizes resistance against side-channel attacks and is suitable for applications where security against such attacks is crucial. Unlike Argon2i, which is optimized for situations where the attacker has access to the hashing server, Argon2d is more efficient in environments where memory usage is the primary concern. It is particularly effective for hashing passwords in databases, ensuring that even if the database is compromised, the passwords remain secure. When choosing between Argon2d and other variants like Argon2i or Argon2id, it is important to assess the specific security requirements of the application and the expected threat model.",
+          "## Examples",
+          "- Used for securing user passwords in web applications.\n- Applied in secure storage solutions to protect sensitive data.",
+          "## Additional Information",
+          "- Argon2d is less resistant to side-channel attacks compared to Argon2i.\n- It is recommended to use Argon2id for general use cases for balanced security.",
+          "## References",
+          "- [What is Argon2? - argon2-cffi 23.1.0 documentation](https://argon2-cffi.readthedocs.io/en/stable/argon2.html)\n- [Argon2 Hash Generator, Validator, Verifier and Resources.](https://argon2.online/)\n- [CryptoLUX](https://www.cryptolux.org/index.php/Argon2)\n- [Argon2 | Practical Cryptography for Developers](https://cryptobook.nakov.com/mac-and-key-derivation/argon2)\n- [Argon2](https://www.argon2.com/)\n- [Choosing Parameters - argon2-cffi 23.1.0 documentation](https://argon2-cffi.readthedocs.io/en/stable/parameters.html)\n- [Password Hashing: PBKDF2, Scrypt, Bcrypt and ARGON2](https://medium.com/analytics-vidhya/password-hashing-pbkdf2-scrypt-bcrypt-and-argon2-e25aaf41598e)\n- [Argon](https://www.cryptolux.org/index.php/Argon)\n- [Argon2](https://en.wikipedia.org/wiki/Argon2)\n- [](https://www.password-hashing.net/argon2-specs.pdf)"
+        ]
+      },
+      {
+        "pageTitle": "Data-independent memory-hard functions (iMHF)",
+        "metaDescription": "A class of functions designed to require significant memory resources to compute, irrespective of the input data.",
+        "slug": "/data-independent-memory-hard-functions-imhf/",
+        "pageHeading": "Data-independent memory-hard functions (iMHF)",
+        "pageDescription": "A class of functions designed to require significant memory resources to compute, irrespective of the input data.",
+        "pageContentBlocks": [
+          "## Description",
+          "Data-independent memory-hard functions (iMHF) are cryptographic functions specifically engineered to resist attacks that utilize specialized hardware, such as ASICs or FPGAs. Unlike traditional hashing algorithms that may scale efficiently with hardware resources, iMHF requires a substantial amount of memory to compute, thus leveling the playing field by increasing the cost of such hardware optimizations. This property makes iMHF particularly suitable for use in contexts where resistance to brute-force attacks is essential, such as password hashing and proof-of-work systems in cryptocurrencies. In these scenarios, the goal is to make it prohibitively expensive for attackers to perform mass parallel computations. iMHFs ensure that even if an attacker has access to powerful computational resources, the requirement for large amounts of memory limits their ability to exploit this advantage. Given that iMHFs are designed to be memory-intensive, they are especially useful in applications where the security of stored passwords or sensitive data is a priority.",
+          "## Examples",
+          "- Argon2: A popular password hashing algorithm that won the Password Hashing Competition in 2015.\n- Scrypt: A memory-hard function that is often used for cryptocurrency mining and secure password storage.",
+          "## Additional Information",
+          "- iMHFs are typically slower than traditional hashing functions due to their memory requirements.\n- They are especially beneficial in mitigating risks associated with GPU or ASIC-based attacks.",
+          "## References",
+          "- [Memory-hard function](https://en.wikipedia.org/wiki/Memory-hard_function)\n- [Computationally Data-Independent Memory Hard Functions](https://arxiv.org/pdf/1911.06790.pdf)\n- [](https://eprint.iacr.org/2016/115.pdf)\n- [](https://eprint.iacr.org/2018/944.pdf)\n- [What are Hash Functions and How to choose a good Hash Function?](https://www.geeksforgeeks.org/what-are-hash-functions-and-how-to-choose-a-good-hash-function/)\n- [2017-10-11 CERIAS - Memory Hard Functions and Password Hashing](https://www.youtube.com/watch?v=8QxFsWszbyI)\n- [Lecture 21: Hash functions](https://www.cs.cornell.edu/courses/cs3110/2008fa/lectures/lec21.html)\n- [Lecture 21: Hash functions](https://www.cs.cornell.edu/courses/cs312/2008sp/lectures/lec21.html)\n- [More Hash Function Tests ·  Aras' website](https://aras-p.info/blog/2016/08/09/More-Hash-Function-Tests/)\n- [](https://infosys.cs.uni-saarland.de/publications/p249-richter.pdf)"
+        ]
+      },
+      {
+        "pageTitle": "Argon2i",
+        "metaDescription": "Argon2i is a memory-hard hashing algorithm designed for secure password hashing and key derivation.",
+        "slug": "/argon2i/",
+        "pageHeading": "Argon2i",
+        "pageDescription": "Argon2i is a memory-hard hashing algorithm designed for secure password hashing and key derivation.",
+        "pageContentBlocks": [
+          "## Description",
+          "Argon2i is one of the variants of the Argon2 password hashing algorithm, which won the Password Hashing Competition in 2015. It is specifically designed to resist attacks using GPUs and ASICs by requiring a significant amount of memory to compute the hash. This makes it difficult for attackers to use parallel processing to crack passwords. Argon2i uses a combination of time and memory cost parameters, allowing users to tune the algorithm's resistance to brute-force attacks based on their security needs and available resources. Argon2i is optimized for use in scenarios where resistance to side-channel attacks is a priority, making it suitable for password storage in web applications and secure authentication systems. It is important to note that while Argon2i is an excellent choice for password hashing, Argon2d is often preferred for use cases that require high speed and less concern about side-channel attacks. When choosing a hashing algorithm, consider the specific security requirements of your application, including the expected threat model.",
+          "## Examples",
+          "- Storing user passwords for web applications securely.\n- Deriving encryption keys from passwords in secure applications.",
+          "## Additional Information",
+          "- Argon2i is recommended for applications where resistance to side-channel attacks is crucial.\n- The algorithm allows configuration of memory usage and execution time to adapt to evolving hardware capabilities.",
+          "## References",
+          "- [Argon2 vs SHA-512, what's better in my case?](https://security.stackexchange.com/questions/261902/argon2-vs-sha-512-whats-better-in-my-case)\n- [Argon2 vs bcrypt vs. scrypt: which hashing algorithm is right for you?](https://stytch.com/blog/argon2-vs-bcrypt-vs-scrypt/)\n- [BCrypt vs Argon2 and their hashing algorithms - Stack Overflow](https://stackoverflow.com/questions/64220922/bcrypt-vs-argon2-and-their-hashing-algorithms)\n- [When to use Argon2i vs Argon2d vs Argon2id?](https://crypto.stackexchange.com/questions/72416/when-to-use-argon2i-vs-argon2d-vs-argon2id)\n- [Password Hashing: Scrypt, Bcrypt and ARGON2 | by Michele Preziuso](https://medium.com/@mpreziuso/password-hashing-pbkdf2-scrypt-bcrypt-and-argon2-e25aaf41598e)\n- [Comparative Analysis of Password Hashing Algorithms: Argon2 ...](https://securityboulevard.com/2024/07/comparative-analysis-of-password-hashing-algorithms-argon2-bcrypt-scrypt-and-pbkdf2/)\n- [Argon2i, SHA512, or Bcrypt? Which is the best? - Quora](https://www.quora.com/Argon2i-SHA512-or-Bcrypt-Which-is-the-best)\n- [PBKDF2 SHA-256 vs Argon2id: Ultimate Comparison for Best ...](https://xahidex.com/blog/pbkdf2-sha-256-vs-argon2id)"
+        ]
+      }
+    ]
+  }
+]
